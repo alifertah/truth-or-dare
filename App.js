@@ -42,22 +42,46 @@ export default function App() {
     }
   }
 
-  const renderActions = () => {
-    return actions.map((action, index) => (
-      <View style={s` bg-red-100 justify-center items-center w-full`}>
-        <TouchableOpacity style={s`py-5`} key={index} onPress={()=>setAndCall(action.value)}>
+  const renderActions = (index) => {
+    const styling = index;
+    return (<View style={s``}>
+    {actions.map((action, index) => (
+        <TouchableOpacity style={index === 0 ? (styles.truth) : (styles.dare)}  key={index} onPress={()=>setAndCall(action.value)}>
           <Text>{action.name}</Text>
         </TouchableOpacity>
-      </View>
-    ));
+      
+    ))
+}
+    </View>)   
   };
 
   return (
-    <View style={s`flex justify-center items-center h-full`}>    
+    <View style={styles.container} > 
     {renderActions()}
-    <Text>{truth}</Text>
+    <Text style={styles.message}>{truth}</Text>
       <StatusBar style="auto" />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container:{
+    backgroundColor: "#025464",
+    width:"100%",
+    height:'100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  truth:{
+    backgroundColor:"#E57C23",
+    width:"100%",
+  },
+  dare:{
+    backgroundColor:"#E8AA42",
+  },
+  message:{
+    backgroundColor:"red"
+  }
+})
 
