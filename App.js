@@ -42,9 +42,10 @@ export default function App() {
     }
   }
 
-  const renderActions = (index) => {
-    const styling = index;
-    return (<View style={s``}>
+
+
+  return (
+    <View style={styles.container} > 
     {actions.map((action, index) => (
         <TouchableOpacity style={index === 0 ? (styles.truth) : (styles.dare)}  key={index} onPress={()=>setAndCall(action.value)}>
           <Text>{action.name}</Text>
@@ -52,12 +53,6 @@ export default function App() {
       
     ))
 }
-    </View>)   
-  };
-
-  return (
-    <View style={styles.container} > 
-    {renderActions()}
     <Text style={styles.message}>{truth}</Text>
       <StatusBar style="auto" />
     </View>
@@ -74,11 +69,20 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   truth:{
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
     backgroundColor:"#E57C23",
     width:"100%",
+    padding:30,
   },
   dare:{
+    display:"flex",
+    justifyContent:"center",
+    alignItems:"center",
     backgroundColor:"#E8AA42",
+    width:"100%",
+    padding:30,
   },
   message:{
     backgroundColor:"red"
