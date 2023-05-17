@@ -10,7 +10,6 @@ const actions = [{name:"Truth", fun:"fetchTruth", value:"truth"},
 
 export default function App() {
   const [truth, setTruth] = useState("")
-  const [tod, setTod] = useState("")
   
   const setAndCall= (actionName)=>{
     if(actionName === "truth")
@@ -48,7 +47,7 @@ export default function App() {
     <View style={styles.container} > 
     {actions.map((action, index) => (
         <TouchableOpacity style={index === 0 ? (styles.truth) : (styles.dare)}  key={index} onPress={()=>setAndCall(action.value)}>
-          <Text style={styles.actionText}>{action.name}</Text>
+          <Text style={styles.actionText}> {action.name}</Text>
         </TouchableOpacity>
       
     ))
@@ -85,8 +84,17 @@ const styles = StyleSheet.create({
     padding:30,
   },
   message:{
-    color:"white"
+    width:"90%",
+    fontWeight:"bold",
+    textAlign:"center",
+    fontSize: 22,
+    color:"linear-gradient(90deg, rgba(229,124,35,1) 0%, rgba(232,170,66,1) 100%)",
+
   },
-  actionText:{}
+  actionText:{
+    color:"white",
+    fontSize:20,
+    fontWeight:"300"
+  }
 })
 
