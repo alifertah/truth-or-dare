@@ -48,7 +48,7 @@ export default function App() {
     <View style={styles.container} > 
     {actions.map((action, index) => (
         <TouchableOpacity style={index === 0 ? (styles.truth) : (styles.dare)}  key={index} onPress={()=>setAndCall(action.value)}>
-          <Text>{action.name}</Text>
+          <Text style={styles.actionText}>{action.name}</Text>
         </TouchableOpacity>
       
     ))
@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
     padding:30,
   },
   message:{
-    backgroundColor:"red"
-  }
+    color:"white"
+  },
+  actionText:{}
 })
 
