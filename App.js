@@ -63,9 +63,10 @@ export default function App() {
 
 const styles = StyleSheet.create({
   actionsContainer:{
-    backgroundColor:"red",
     display:"flex",
     flexDirection:"row",
+    width:"100%",
+    justifyContent:"space-around"
   },
   container:{
     display:"flex",
@@ -79,6 +80,7 @@ const styles = StyleSheet.create({
      alignItems:"center",
      backgroundColor:"#E57C23",
      padding:30,
+     borderRadius:"5%"
    },
    dare:{
      display:"flex",
@@ -86,6 +88,7 @@ const styles = StyleSheet.create({
      alignItems:"center",
      backgroundColor:"#E8AA42",
      padding:30,
+     borderRadius:"5%"
    },
    message:{
      width:"90%",
