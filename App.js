@@ -42,8 +42,6 @@ export default function App() {
     }
   }
 
-
-
   return (
     <View style={styles.container} > 
     <Text style={styles.message}>{truth}</Text>
@@ -72,13 +70,14 @@ const styles = StyleSheet.create({
     display:"flex",
     justifyContent:"space-around",
     alignItems:"center",
-    height:"100%"
+    height:"100%",
+    backgroundColor:"#f5fefa"
   },
    truth:{
      display:"flex",
      justifyContent:"center",
      alignItems:"center",
-     backgroundColor:"#E57C23",
+     backgroundColor:"#09a0a5",
      padding:30,
      borderRadius:"5%"
    },
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
      display:"flex",
      justifyContent:"center",
      alignItems:"center",
-     backgroundColor:"#E8AA42",
+     backgroundColor:"#042244",
      padding:30,
      borderRadius:"5%"
    },
@@ -95,7 +94,7 @@ const styles = StyleSheet.create({
      fontWeight:"bold",
      textAlign:"center",
      fontSize: 22,
-     color:"linear-gradient(90deg, rgba(229,124,35,1) 0%, rgba(232,170,66,1) 100%)",
+     color:"#134E50",
  },
   actionText:{
     color:"white",
@@ -103,4 +102,3 @@ const styles = StyleSheet.create({
     fontWeight:"300"
   }
 })
-
