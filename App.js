@@ -10,7 +10,7 @@ const actions = [{name:"Truth", fun:"fetchTruth", value:"truth"},
 ]
 
 export default function App() {
-  const [truth, setTruth] = useState("")
+  const [truth, setTruth] = useState("Welcome to ToD!")
   
   const setAndCall= (actionName)=>{
     if(actionName === "truth")
